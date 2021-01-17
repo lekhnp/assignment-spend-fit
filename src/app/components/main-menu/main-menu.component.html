@@ -1,0 +1,14 @@
+<div class="profileOverview">
+    <img src="assets/images/logo.png" alt="SpendFit Logo">
+</div>
+<div class="menuContainer">
+    <mat-action-list>
+        <ng-container *ngFor="let menu of menuData">
+            <button mat-list-item [routerLink]="menu.path" routerLinkActive="active" [matTooltip]="!expanded ? menu.title: ''" matTooltipPosition="after">
+                <mat-icon mat-list-icon>{{menu.icon}}</mat-icon> 
+                <div mat-line class="title">{{menu.title}}</div>
+            </button>
+            <mat-divider *ngIf="menu.isDivider"></mat-divider>
+        </ng-container>
+    </mat-action-list>
+</div>

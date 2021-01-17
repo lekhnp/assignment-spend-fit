@@ -1,0 +1,14 @@
+<mat-sidenav-container [class.collapsed]="!mainMenuExpanded">
+    <mat-sidenav class="mainMenu" position="start" [mode]="'side'" #sidenav [(opened)]="isMainMenuOpen">
+        <app-main-menu [expanded]="mainMenuExpanded"></app-main-menu>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+        <div class="main-container">
+            <div class="content-container">
+                <section class="main-section">
+                  <router-outlet></router-outlet> 
+                </section>
+              </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
